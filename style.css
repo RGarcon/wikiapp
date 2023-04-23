@@ -1,0 +1,133 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  font-family: 'Helvetica Neue';
+  padding: clamp(20px, 5vw, 50px) 20px 20px;
+}
+
+img {
+  margin: 10px auto 5px;
+  width: clamp(50px, 25vh, 150px);
+  display: block;
+
+}
+
+h1 {
+  text-align: center;
+  margin: 0 auto 20px;
+  font-family: 'Helvetica Neue';
+  font-size: clamp(10px, 5vh, 50px);
+  ;
+  color: azure;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  margin: 0 auto 30px;
+  width: 50%;
+  border-radius: 3px;
+  border: none;
+  background-color: rgb(229, 236, 239);
+  padding: 7px;
+  box-shadow: 0px 2px 13px 1px rgba(0, 0, 0, 0.82);
+  color: black;
+  font-size: 20px;
+
+}
+
+
+.error-msg {
+  text-align: center;
+  color: crimson;
+}
+
+.results-display {
+  width: 80%;
+  margin: 20px auto 20px;
+
+}
+
+.liste-results {
+  display: block;
+  list-style: none;
+
+}
+
+li {
+  border: solid 0.5px;
+  border-radius: 5px;
+  padding: 7px;
+  margin: 10px auto;
+  background-color: rgb(227, 236, 233);
+
+}
+
+li h2 {
+  font-size: 20px;
+  margin: 5px auto 0;
+
+}
+
+li p {
+  margin: 5px auto 0;
+  font-size: 13px;
+}
+
+a {
+  font-size: 13px;
+}
+
+
+.error-loader {
+  display: flex;
+  justify-content: center;
+}
+
+.error-loader.switchedoff {
+  visibility: hidden;
+}
+
+.dot {
+  background-color: rgb(255, 255, 255);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 0 2px 0;
+  animation: load 0.3s infinite ease-out alternate;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+
+@keyframes load {
+  to {
+    transform: translateY(10px);
+  }
+}
+
+
+@media only screen and (max-width: 720px) {
+
+  ::placeholder {
+    font-size: 10px;
+  }
+
+}
